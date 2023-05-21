@@ -12,11 +12,13 @@ namespace BankSystem
 {
     public partial class Form2 : Form
     {
+        BankSystemControler b;
         public static Form2 Instance;
         public Form2()
         {
             InitializeComponent();
             Instance = this;
+            b=new BankSystemControler("Data Source=.;Initial Catalog=myBankSystem;Integrated Security=True");
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -26,7 +28,9 @@ namespace BankSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Customer customer = new Customer();
+            
+            
         }
     }
 }
