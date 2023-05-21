@@ -18,7 +18,7 @@ namespace BankSystem
         {
             InitializeComponent();
             Instance = this;
-            b=new BankSystemControler("Data Source=.;Initial Catalog=myBankSystem;Integrated Security=True");
+            b = new BankSystemControler();
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -35,6 +35,7 @@ namespace BankSystem
             customer.Address = address_txtBX.Text.ToString();
             customer.UserName = user_txtBX.Text.ToString();
             customer.Password = pass_txtBX.Text.ToString();
+            b.SaveUser(customer);
         }
     }
 }

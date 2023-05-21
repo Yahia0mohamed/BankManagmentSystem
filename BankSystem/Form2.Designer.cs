@@ -31,18 +31,18 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             button1 = new Button();
             button2 = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
+            SSN_txtBX = new TextBox();
+            name_txtBX = new TextBox();
+            address_txtBX = new TextBox();
+            phone_txtBX = new TextBox();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
+            pass_txtBX = new TextBox();
+            user_txtBX = new TextBox();
             SuspendLayout();
             // 
             // button1
@@ -64,34 +64,34 @@
             button2.Text = "login";
             button2.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // SSN_txtBX
             // 
-            textBox1.Location = new Point(123, 82);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
-            textBox1.TabIndex = 2;
+            SSN_txtBX.Location = new Point(123, 82);
+            SSN_txtBX.Name = "SSN_txtBX";
+            SSN_txtBX.Size = new Size(125, 27);
+            SSN_txtBX.TabIndex = 2;
             // 
-            // textBox2
+            // name_txtBX
             // 
-            textBox2.Location = new Point(123, 134);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 27);
-            textBox2.TabIndex = 3;
+            name_txtBX.Location = new Point(123, 134);
+            name_txtBX.Name = "name_txtBX";
+            name_txtBX.Size = new Size(125, 27);
+            name_txtBX.TabIndex = 3;
             // 
-            // textBox3
+            // address_txtBX
             // 
-            textBox3.Location = new Point(123, 191);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(125, 27);
-            textBox3.TabIndex = 4;
+            address_txtBX.Location = new Point(123, 191);
+            address_txtBX.Name = "address_txtBX";
+            address_txtBX.Size = new Size(125, 27);
+            address_txtBX.TabIndex = 4;
             // 
-            // textBox4
+            // phone_txtBX
             // 
-            textBox4.Location = new Point(123, 249);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(125, 27);
-            textBox4.TabIndex = 5;
-            textBox4.Text = "(+20)";
+            phone_txtBX.Location = new Point(123, 249);
+            phone_txtBX.Name = "phone_txtBX";
+            phone_txtBX.Size = new Size(125, 27);
+            phone_txtBX.TabIndex = 5;
+            phone_txtBX.Text = "(+20)";
             // 
             // label1
             // 
@@ -159,19 +159,19 @@
             label6.TabIndex = 12;
             label6.Text = "user name";
             // 
-            // textBox5
+            // pass_txtBX
             // 
-            textBox5.Location = new Point(123, 367);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(125, 27);
-            textBox5.TabIndex = 11;
+            pass_txtBX.Location = new Point(123, 367);
+            pass_txtBX.Name = "pass_txtBX";
+            pass_txtBX.Size = new Size(125, 27);
+            pass_txtBX.TabIndex = 11;
             // 
-            // textBox6
+            // user_txtBX
             // 
-            textBox6.Location = new Point(123, 315);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(125, 27);
-            textBox6.TabIndex = 10;
+            user_txtBX.Location = new Point(123, 315);
+            user_txtBX.Name = "user_txtBX";
+            user_txtBX.Size = new Size(125, 27);
+            user_txtBX.TabIndex = 10;
             // 
             // Form2
             // 
@@ -182,16 +182,16 @@
             ClientSize = new Size(800, 450);
             Controls.Add(label5);
             Controls.Add(label6);
-            Controls.Add(textBox5);
-            Controls.Add(textBox6);
+            Controls.Add(pass_txtBX);
+            Controls.Add(user_txtBX);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(phone_txtBX);
+            Controls.Add(address_txtBX);
+            Controls.Add(name_txtBX);
+            Controls.Add(SSN_txtBX);
             Controls.Add(button2);
             Controls.Add(button1);
             Name = "Form2";
@@ -205,17 +205,17 @@
 
         private Button button1;
         private Button button2;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
+        private TextBox SSN_txtBX;
+        private TextBox name_txtBX;
+        private TextBox address_txtBX;
+        private TextBox phone_txtBX;
         private Label label1;
         private Label label2;
         private Label label3;
         private Label label4;
         private Label label5;
         private Label label6;
-        private TextBox textBox5;
-        private TextBox textBox6;
+        private TextBox pass_txtBX;
+        private TextBox user_txtBX;
     }
 }

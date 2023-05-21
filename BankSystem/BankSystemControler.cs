@@ -12,18 +12,15 @@ namespace BankSystem
         private SqlDataReader reader;
         private SqlDataAdapter adapter;
         private DataTable dt;//add data grid view
-        public BankSystemControler(string connection)
+        public BankSystemControler()
         {
-            this.cnn = new SqlConnection(connection);
+            this.cnn = new SqlConnection("Data Source=.; Initial Catalog = myBankSystem; Integrated Security = True");
             this.dt = new DataTable();
-            this.cnn.Open();
-        }
-        ~BankSystemControler()
-        {
-            this.cnn.Close();
+            
         }
         public void SaveUser(Customer customer) {
-            this.cmd = new SqlCommand("insert into Customer(SSN,name,phone,address,userName,password) values(@ssn,@n,@p,@a,@un,@pass)");
+            this.cnn.Open();
+            this.cmd = new SqlCommand("insert into Customer(SSN,name,phone,address,userName,password) values(@ssn,@n,@p,@a,@un,@pass)",this.cnn);
             this.cmd.Parameters.AddWithValue("ssn", customer.Ssn);
             this.cmd.Parameters.AddWithValue("n", customer.Name);
             this.cmd.Parameters.AddWithValue("p", customer.Phone);
@@ -31,6 +28,7 @@ namespace BankSystem
             this.cmd.Parameters.AddWithValue("un", customer.UserName);
             this.cmd.Parameters.AddWithValue("pass", customer.Password);
             this.cmd.ExecuteNonQuery();
+            this.cnn.Close();
         }
         public Customer? LoadCustomer(string un,string pass) { 
             Customer result=new Customer();
