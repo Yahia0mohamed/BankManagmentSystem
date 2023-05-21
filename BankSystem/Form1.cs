@@ -26,7 +26,7 @@ namespace BankSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 newWind= new Form2();
+            Form2 newWind = new Form2();
             newWind.Show();
         }
     }

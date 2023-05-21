@@ -105,7 +105,7 @@
             Controls.Add(button1);
             Controls.Add(label1);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Bank System";
             Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();

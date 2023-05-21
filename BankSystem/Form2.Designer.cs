@@ -194,9 +194,8 @@
             Controls.Add(textBox1);
             Controls.Add(button2);
             Controls.Add(button1);
-            FormBorderStyle = FormBorderStyle.None;
             Name = "Form2";
-            Text = "Form2";
+            Text = "Sign Up or Login";
             Load += Form2_Load;
             ResumeLayout(false);
             PerformLayout();
