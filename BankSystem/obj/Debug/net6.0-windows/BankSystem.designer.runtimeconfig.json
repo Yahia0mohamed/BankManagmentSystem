@@ -12,7 +12,7 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\yaras\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\yahia\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\yaras\\.nuget\\packages"
     ],
     "configProperties": {
