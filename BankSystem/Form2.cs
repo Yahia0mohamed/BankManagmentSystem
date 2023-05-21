@@ -29,8 +29,12 @@ namespace BankSystem
         private void button1_Click(object sender, EventArgs e)
         {
             Customer customer = new Customer();
-            
-            
+            customer.Ssn = SSN_txtBX.Text.ToString();
+            customer.Name = name_txtBX.Text.ToString();
+            customer.Phone = phone_txtBX.Text.ToString();
+            customer.Address = address_txtBX.Text.ToString();
+            customer.UserName = user_txtBX.Text.ToString();
+            customer.Password = pass_txtBX.Text.ToString();
         }
     }
 }

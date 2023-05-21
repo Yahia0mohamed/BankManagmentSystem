@@ -470,19 +470,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\yahia\\.nuget\\packages\\": {}
+    "C:\\Users\\yaras\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\FCAI\\database\\DataBase_Project\\BankSystem\\BankSystem.csproj",
+      "projectUniqueName": "C:\\repo\\DataBase_Project\\BankSystem\\BankSystem.csproj",
       "projectName": "BankSystem",
-      "projectPath": "D:\\FCAI\\database\\DataBase_Project\\BankSystem\\BankSystem.csproj",
-      "packagesPath": "C:\\Users\\yahia\\.nuget\\packages\\",
-      "outputPath": "D:\\FCAI\\database\\DataBase_Project\\BankSystem\\obj\\",
+      "projectPath": "C:\\repo\\DataBase_Project\\BankSystem\\BankSystem.csproj",
+      "packagesPath": "C:\\Users\\yaras\\.nuget\\packages\\",
+      "outputPath": "C:\\repo\\DataBase_Project\\BankSystem\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\yahia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\yaras\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
