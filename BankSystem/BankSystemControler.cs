@@ -1,6 +1,8 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 using System.Data.SqlClient;
 using System.Runtime.CompilerServices;
+using System.Text;
 
 namespace BankSystem
 {
@@ -12,13 +14,26 @@ namespace BankSystem
         private DataTable dt;//add data grid view
         public BankSystemControler()
         {
-            cnn = new SqlConnection("Data Source=.;Initial Catalog=myBankSystem;Integrated Security=True");
-            dt = new DataTable();
+            this.cnn = new SqlConnection("Data Source=.;Initial Catalog=myBankSystem;Integrated Security=True");
+            this.dt = new DataTable();
+            this.cnn.Open();
         }
-        public void SaveUser(Customer customer) { }
+        ~BankSystemControler()
+        {
+            this.cnn.Close();
+        }
+        public void SaveUser(Customer customer) {
+            this.cmd = new SqlCommand("insert into Customer(SSN,name,phone,address,userName,password) values(@ssn,@n,@p,@a,@un,@pass)");
+            this.cmd.Parameters.AddWithValue("ssn", customer.Ssn);
+            this.cmd.Parameters.AddWithValue("n", customer.Name);
+            this.cmd.Parameters.AddWithValue("p", customer.Phone);
+            this.cmd.Parameters.AddWithValue("a", customer.Address);
+            this.cmd.Parameters.AddWithValue("un", customer.UserName);
+            this.cmd.Parameters.AddWithValue("pass", customer.Password);
+            this.cmd.ExecuteNonQuery();
+        }
         public Customer? LoadCustomer(string un,string pass) { 
             Customer result=new Customer();
-            this.cnn.Open();
             this.cmd=new SqlCommand("SELECT * FROM CUSTOMER WHERE customer.userName=@un AND customer.password=@pass",this.cnn);
             this.cmd.Parameters.AddWithValue("un", un);
             this.cmd.Parameters.AddWithValue("pass", pass);
@@ -31,12 +46,26 @@ namespace BankSystem
             return null;
         }
         public void UpdateUser(Customer customer) { }
-        public void SaveUser(Employee employee) { }
-        public static Employee LoadEmployee(string un, string pass) { return new Employee(); }
+        public void SaveUser(Employee employee) {
+            this.cmd = new SqlCommand("insert into employee(employeeID,branchID,userName,password,name) values(@id,@b,@un,@pass,@n)");
+            this.cmd.Parameters.AddWithValue("id", generateID(10));
+            this.cmd.Parameters.AddWithValue("b",employee.BranchID);
+            this.cmd.Parameters.AddWithValue("un",employee.UserName);
+            this.cmd.Parameters.AddWithValue("pass", employee.Password);
+            this.cmd.Parameters.AddWithValue("n", employee.Name);
+            this.cmd.ExecuteNonQuery();
+        }
+        public Employee LoadEmployee(string un, string pass) { return new Employee(); }
         public void ViewLoans() { }
         public void AcceptLoan(WaitingList loan) { }
         public static bool IsEmailThere(string email) { return false; }
         public DataTable getTable(){ return this.dt; }
+        public static string generateID(int length){
+            Random random = new Random();
+        const string chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            return new string(Enumerable.Repeat(chars, length)
+                .Select(s => s[random.Next(s.Length)]).ToArray());
+        }
     }
 
 }
