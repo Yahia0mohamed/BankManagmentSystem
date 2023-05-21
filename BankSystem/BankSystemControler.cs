@@ -12,9 +12,9 @@ namespace BankSystem
         private SqlDataReader reader;
         private SqlDataAdapter adapter;
         private DataTable dt;//add data grid view
-        public BankSystemControler()
+        public BankSystemControler(string connection)
         {
-            this.cnn = new SqlConnection("Data Source=.;Initial Catalog=myBankSystem;Integrated Security=True");
+            this.cnn = new SqlConnection(connection);
             this.dt = new DataTable();
             this.cnn.Open();
         }
