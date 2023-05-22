@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,13 +13,13 @@ namespace BankSystem
 {
     public partial class Form2 : Form
     {
-        BankSystemControler b;
+
         public static Form2 Instance;
         public Form2()
         {
             InitializeComponent();
             Instance = this;
-            b = new BankSystemControler();
+            signUp1.Hide();
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -28,14 +29,12 @@ namespace BankSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Customer customer = new Customer();
-            customer.Ssn = SSN_txtBX.Text.ToString();
-            customer.Name = name_txtBX.Text.ToString();
-            customer.Phone = phone_txtBX.Text.ToString();
-            customer.Address = address_txtBX.Text.ToString();
-            customer.UserName = user_txtBX.Text.ToString();
-            customer.Password = pass_txtBX.Text.ToString();
-            b.SaveUser(customer);
+            signUp1.Show();
+        }
+
+        private void signUp1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

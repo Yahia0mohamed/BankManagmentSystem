@@ -15,35 +15,51 @@ namespace BankSystem
         public BankSystemControler()
         {
             this.cnn = new SqlConnection("Data Source=.; Initial Catalog = myBankSystem; Integrated Security = True");
-            this.dt = new DataTable();
-            
-        }
-        public void SaveUser(Customer customer) {
             this.cnn.Open();
-            this.cmd = new SqlCommand("insert into Customer(SSN,name,phone,address,userName,password) values(@ssn,@n,@p,@a,@un,@pass)",this.cnn);
-            this.cmd.Parameters.AddWithValue("ssn", customer.Ssn);
-            this.cmd.Parameters.AddWithValue("n", customer.Name);
-            this.cmd.Parameters.AddWithValue("p", customer.Phone);
-            this.cmd.Parameters.AddWithValue("a", customer.Address);
-            this.cmd.Parameters.AddWithValue("un", customer.UserName);
-            this.cmd.Parameters.AddWithValue("pass", customer.Password);
-            this.cmd.ExecuteNonQuery();
+        }
+        ~BankSystemControler()
+        {
             this.cnn.Close();
         }
-        public Customer? LoadCustomer(string un,string pass) { 
-            Customer result=new Customer();
-            this.cmd=new SqlCommand("SELECT * FROM CUSTOMER WHERE customer.userName=@un AND customer.password=@pass",this.cnn);
-            this.cmd.Parameters.AddWithValue("un", un);
-            this.cmd.Parameters.AddWithValue("pass", pass);
-            this.adapter = new SqlDataAdapter(this.cmd);
-            this.reader=cmd.ExecuteReader();
-            if (this.reader.Read()) {
-                result.SetCustomer(reader.GetValue(1).ToString(),reader.GetValue(2).ToString(),reader.GetValue(3).ToString(),reader.GetValue(4).ToString(),reader.GetValue(5).ToString(),reader.GetValue(6).ToString(),reader.GetValue(7).ToString());
-                return result;
+        public void SaveUser(Customer customer) {
+            try
+            {
+                this.cmd = new SqlCommand("insert into Customer(SSN,name,phone,address,userName,password) values(@ssn,@n,@p,@a,@un,@pass)", this.cnn);
+                this.cmd.Parameters.AddWithValue("ssn", customer.Ssn);
+                this.cmd.Parameters.AddWithValue("n", customer.Name);
+                this.cmd.Parameters.AddWithValue("p", customer.Phone);
+                this.cmd.Parameters.AddWithValue("a", customer.Address);
+                this.cmd.Parameters.AddWithValue("un", customer.UserName);
+                this.cmd.Parameters.AddWithValue("pass", customer.Password);
+                this.cmd.ExecuteNonQuery();
+            }catch(SqlException e)
+            {
+                Console.WriteLine(e.ToString());
             }
-            return null;
         }
-        public void UpdateUser(Customer customer) { }
+        public Customer? LoadCustomer(string un,string pass) {
+            try
+            {
+                Customer result = new Customer();
+                this.cmd = new SqlCommand("SELECT * FROM CUSTOMER WHERE customer.userName=@un AND customer.password=@pass", this.cnn);
+                this.cmd.Parameters.AddWithValue("un", un);
+                this.cmd.Parameters.AddWithValue("pass", pass);
+                this.adapter = new SqlDataAdapter(this.cmd);
+                this.reader = cmd.ExecuteReader();
+                if (this.reader.Read())
+                {
+                    result.SetCustomer(reader.GetValue(1).ToString(), reader.GetValue(2).ToString(), reader.GetValue(3).ToString(), reader.GetValue(4).ToString(), reader.GetValue(5).ToString(), reader.GetValue(6).ToString(), reader.GetValue(7).ToString());
+                    return result;
+                }
+                return null;
+            }catch(SqlException e) { 
+                Console.WriteLine(e.ToString());
+                return null;
+            }
+        }
+        public void UpdateUser(Customer customer) {
+            
+        }
         public void SaveUser(Employee employee) {
             this.cmd = new SqlCommand("insert into employee(employeeID,branchID,userName,password,name) values(@id,@b,@un,@pass,@n)");
             this.cmd.Parameters.AddWithValue("id", generateID(10));

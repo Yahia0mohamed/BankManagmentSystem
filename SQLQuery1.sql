@@ -188,3 +188,13 @@ where loanID='?';
 
 
 
+select * from customer
+
+alter table loanwaitinglist
+add constraint COM_PK_SSN_BRANCHID
+PRIMARY KEY(SSN,branchID);
+
+alter table loanwaitinglist
+alter column SSN varchar(10) not null;
+alter table loanwaitinglist
+alter column branchID varchar(10) not null;

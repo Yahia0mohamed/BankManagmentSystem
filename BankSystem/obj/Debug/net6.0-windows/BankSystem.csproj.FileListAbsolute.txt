@@ -24,3 +24,4 @@ D:\FCAI\database\DataBase_Project\BankSystem\bin\Debug\net6.0-windows\runtimes\w
 D:\FCAI\database\DataBase_Project\BankSystem\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\FCAI\database\DataBase_Project\BankSystem\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\FCAI\database\DataBase_Project\BankSystem\obj\Debug\net6.0-windows\BankSystem.csproj.CopyComplete
+D:\FCAI\database\DataBase_Project\BankSystem\obj\Debug\net6.0-windows\BankSystem.SignUp.resources
