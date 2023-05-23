@@ -4,6 +4,9 @@
     <Compile Update="ActivateAccount.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="AdminFunc.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="empSignUp.cs">
       <SubType>UserControl</SubType>
     </Compile>

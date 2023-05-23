@@ -93,6 +93,7 @@
             linkLabel1.TabIndex = 4;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "click";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
             // homePage
             // 

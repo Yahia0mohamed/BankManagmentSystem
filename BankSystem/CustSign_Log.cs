@@ -66,5 +66,10 @@ namespace BankSystem
         {
             signUp1.Show();
         }
+
+        private void signUp1_Load_2(object sender, EventArgs e)
+        {
+
+        }
     }
 }

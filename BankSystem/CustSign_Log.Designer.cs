@@ -49,10 +49,12 @@
             // signUp1
             // 
             signUp1.BackColor = Color.Transparent;
+            signUp1.branchID = null;
             signUp1.Location = new Point(12, 39);
             signUp1.Name = "signUp1";
             signUp1.Size = new Size(405, 489);
             signUp1.TabIndex = 4;
+            signUp1.Load += signUp1_Load_2;
             // 
             // logIn2
             // 
