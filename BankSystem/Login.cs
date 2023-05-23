@@ -63,7 +63,7 @@ namespace BankSystem
                     user_txtBX.ResetText();
                     pass_txtBX.ResetText();
                     this.Employee = emp;
-                    EmpFunc newWin = new EmpFunc(Employee);
+                    form newWin = new form(Employee);
                     newWin.Show();
 
                 }

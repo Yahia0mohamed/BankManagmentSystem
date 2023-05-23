@@ -21,10 +21,11 @@ namespace BankSystem
             b = new BankSystemControler();
             pass_txtBX.PasswordChar = '*';
         }
-
+        public string branchID { get; set; }
         private void button1_Click(object sender, EventArgs e)
         {
             Customer customer = new Customer();
+            customer.BranchID = this.branchID;
             customer.Ssn = SSN_txtBX.Text.ToString();
             customer.Name = name_txtBX.Text.ToString();
             customer.Phone = phone_txtBX.Text.ToString();

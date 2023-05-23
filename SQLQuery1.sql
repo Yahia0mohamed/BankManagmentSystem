@@ -256,3 +256,8 @@ values('Masr109', 'Kafr Tohormos , Bulaq, Giza Governorate','G9lk678'),
       ('AL-Ahli90', 'Dokki, Giza Governorate','12u767834'),
       ('CIB123','Mall Of Egypt , Level 2, Giza Governorate', 'T345678LV'),
       ('QNB395', 'Nasr City, Cairo Governorate', '165Rt5678');
+
+
+	  select * from customer;
+
+	  select * from loanWaitingList;

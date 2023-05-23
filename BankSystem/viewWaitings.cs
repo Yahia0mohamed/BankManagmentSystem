@@ -10,22 +10,15 @@ using System.Windows.Forms;
 
 namespace BankSystem
 {
-    public partial class bar : UserControl
+    public partial class viewWaitings : UserControl
     {
-        public bar()
+        public viewWaitings()
         {
             InitializeComponent();
         }
 
-        private void bar_Load(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            homePage homePage = new homePage();
-            homePage.Show();
 
         }
     }

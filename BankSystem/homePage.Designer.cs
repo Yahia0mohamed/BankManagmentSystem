@@ -34,8 +34,6 @@
             button2 = new Button();
             label2 = new Label();
             linkLabel1 = new LinkLabel();
-            label3 = new Label();
-            button3 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -78,7 +76,7 @@
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
             label2.ForeColor = SystemColors.ControlLightLight;
-            label2.Location = new Point(805, 607);
+            label2.Location = new Point(681, 344);
             label2.Name = "label2";
             label2.Size = new Size(64, 20);
             label2.TabIndex = 3;
@@ -89,31 +87,12 @@
             linkLabel1.AutoSize = true;
             linkLabel1.BackColor = Color.Transparent;
             linkLabel1.LinkColor = Color.DodgerBlue;
-            linkLabel1.Location = new Point(867, 607);
+            linkLabel1.Location = new Point(743, 344);
             linkLabel1.Name = "linkLabel1";
             linkLabel1.Size = new Size(38, 20);
             linkLabel1.TabIndex = 4;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "click";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(649, 402);
-            label3.Name = "label3";
-            label3.Size = new Size(0, 20);
-            label3.TabIndex = 5;
-            label3.Click += label3_Click;
-            // 
-            // button3
-            // 
-            button3.Font = new Font("Arial", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.Location = new Point(659, 350);
-            button3.Name = "button3";
-            button3.Size = new Size(146, 56);
-            button3.TabIndex = 6;
-            button3.Text = "Admin";
-            button3.UseVisualStyleBackColor = true;
             // 
             // homePage
             // 
@@ -122,9 +101,7 @@
             BackColor = Color.White;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(917, 660);
-            Controls.Add(button3);
-            Controls.Add(label3);
+            ClientSize = new Size(848, 462);
             Controls.Add(linkLabel1);
             Controls.Add(label2);
             Controls.Add(button2);
@@ -144,7 +121,5 @@
         private Button button2;
         private Label label2;
         private LinkLabel linkLabel1;
-        private Label label3;
-        private Button button3;
     }
 }

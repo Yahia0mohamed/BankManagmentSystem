@@ -30,7 +30,6 @@ D:\FCAI\database\DataBase_Project\BankSystem\obj\Debug\net6.0-windows\BankSystem
 D:\FCAI\database\DataBase_Project\BankSystem\obj\Debug\net6.0-windows\BankSystem.CustSign_Log.resources
 D:\FCAI\database\DataBase_Project\BankSystem\obj\Debug\net6.0-windows\BankSystem.empSign_Log.resources
 D:\FCAI\database\DataBase_Project\BankSystem\obj\Debug\net6.0-windows\BankSystem.homePage.resources
-D:\FCAI\database\DataBase_Project\BankSystem\obj\Debug\net6.0-windows\BankSystem.EmpFunc.resources
 D:\FCAI\database\DataBase_Project\BankSystem\obj\Debug\net6.0-windows\BankSystem.empSignUp.resources
 C:\repo\DataBase_Project\BankSystem\obj\Debug\net6.0-windows\BankSystem.csproj.AssemblyReference.cache
 C:\repo\DataBase_Project\BankSystem\obj\Debug\net6.0-windows\BankSystem.CustFunc.resources
@@ -68,3 +67,8 @@ C:\repo\DataBase_Project\BankSystem\bin\Debug\net6.0-windows\runtimes\win\lib\ne
 C:\repo\DataBase_Project\BankSystem\obj\Debug\net6.0-windows\BankSystem.csproj.CopyComplete
 C:\repo\DataBase_Project\BankSystem\obj\Debug\net6.0-windows\BankSystem.genruntimeconfig.cache
 C:\repo\DataBase_Project\BankSystem\obj\Debug\net6.0-windows\ref\BankSystem.dll
+D:\FCAI\database\DataBase_Project\BankSystem\obj\Debug\net6.0-windows\BankSystem.bar.resources
+D:\FCAI\database\DataBase_Project\BankSystem\obj\Debug\net6.0-windows\BankSystem.viewAllUser.resources
+D:\FCAI\database\DataBase_Project\BankSystem\obj\Debug\net6.0-windows\BankSystem.ActivateAccount.resources
+D:\FCAI\database\DataBase_Project\BankSystem\obj\Debug\net6.0-windows\BankSystem.form.resources
+D:\FCAI\database\DataBase_Project\BankSystem\obj\Debug\net6.0-windows\BankSystem.ViewUsers.resources

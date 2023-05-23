@@ -26,13 +26,14 @@ namespace BankSystem
         public void SaveUser(Customer customer) {
             try
             {
-                this.cmd = new SqlCommand("insert into Customer(SSN,name,phone,address,userName,password) values(@ssn,@n,@p,@a,@un,@pass)", this.cnn);
+                this.cmd = new SqlCommand("insert into Customer(SSN,name,phone,address,userName,password,branchID) values(@ssn,@n,@p,@a,@un,@pass,@b)", this.cnn);
                 this.cmd.Parameters.AddWithValue("ssn", customer.Ssn);
                 this.cmd.Parameters.AddWithValue("n", customer.Name);
                 this.cmd.Parameters.AddWithValue("p", customer.Phone);
                 this.cmd.Parameters.AddWithValue("a", customer.Address);
                 this.cmd.Parameters.AddWithValue("un", customer.UserName);
                 this.cmd.Parameters.AddWithValue("pass", customer.Password);
+                this.cmd.Parameters.AddWithValue("b", customer.BranchID);
                 this.cmd.ExecuteNonQuery();
             }catch(SqlException e)
             {
@@ -106,36 +107,12 @@ namespace BankSystem
         }
         public void ViewLoans() { }
         public void AcceptLoan(WaitingList loan) { }
-        public DataGridView GetCustomers()
-        {
-            try
-            {
-                DataGridView table = new DataGridView();
-                DataTable dt = new DataTable();
-                this.cmd = new SqlCommand("select name,phone,address,SSN,branchID from Customer", this.cnn);
-                adapter = new SqlDataAdapter(this.cmd);
-                adapter.Fill(dt);
-                table.DataSource = dt;
-                if (dt.Rows.Count > 0)
-                {
-                    return table;
-                }
-                MessageBox.Show("no data to show");
-                return new DataGridView();
-
-            }
-            catch(SqlException e)
-            {
-                return new DataGridView();
-            }
-
-        }
         public DataGridView getLoanTypes()
         {
             try
             {
                 DataGridView table = new DataGridView();
-                DataTable dt = new DataTable();
+                dt = new DataTable();
                 this.cmd = new SqlCommand("select distinct loanType from Loan;", this.cnn);
                 adapter = new SqlDataAdapter(cmd);
                 adapter.Fill(dt);
@@ -152,17 +129,54 @@ namespace BankSystem
                 return new DataGridView();
             }
         }
-        public void RequestLoan(string SSn,string LoanType,string branchID,double amount)
+        public DataGridView ViewCustomers(string branchID)
+        {
+            try {
+                DataGridView table = new DataGridView();
+                dt = new DataTable();
+                this.cmd = new SqlCommand("select name,phone,address,SSN from customer where customer.branchID=@b;", this.cnn);
+                this.cmd.Parameters.AddWithValue("b", branchID);
+                adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(dt);
+                table.DataSource = dt;
+                if (dt.Rows.Count > 0)
+                {
+                    return table;
+                }
+                MessageBox.Show("no data to show");
+                return new DataGridView();
+            }
+            catch (Exception ex)
+            {
+                return new DataGridView();
+            }
+        }
+        public void RequestLoan(string SSn,string LoanType,string branchID,double amount,string name)
         {
             try
             {
-                this.cmd = new SqlCommand("insert into loanwaitinglist(SSN,loanType,branchID,amount) values(@SSN,@loanType,@branchID,@amount)");
-                this.cmd.Parameters.AddWithValue("SSN", SSn);
-                this.cmd.Parameters.AddWithValue("loanType", LoanType);
-                this.cmd.Parameters.AddWithValue("branchID", branchID);
-                this.cmd.Parameters.AddWithValue("amount", amount);
-                this.cmd.ExecuteNonQuery();
-                MessageBox.Show("added to waiting list");
+                this.cmd = new SqlCommand("select SSN from customer where branchID=@b and SSN=@s ", this.cnn);
+                this.cmd.Parameters.AddWithValue("b", branchID);
+                this.cmd.Parameters.AddWithValue("s", SSn);
+                dt=new DataTable();
+                adapter= new SqlDataAdapter(this.cmd);
+                adapter.Fill(dt);
+                if (dt.Rows.Count > 0)
+                {
+                    this.cmd = new SqlCommand("insert into loanwaitinglist(SSN,loanType,branchID,amount,customername) values(@SSN,@loanType,@branchID,@amount,@n)",this.cnn);
+                    this.cmd.Parameters.AddWithValue("SSN", SSn);
+                    this.cmd.Parameters.AddWithValue("loanType", LoanType);
+                    this.cmd.Parameters.AddWithValue("branchID", branchID);
+                    this.cmd.Parameters.AddWithValue("amount", amount);
+                    this.cmd.Parameters.AddWithValue ("n", name);
+                    this.cmd.ExecuteNonQuery();
+                    MessageBox.Show("added to waiting list");
+                }
+                else
+                {
+                    MessageBox.Show("you are not a customer in this bank");
+                    return;
+                }
             }
             catch(SqlException e)
             {
@@ -171,6 +185,24 @@ namespace BankSystem
             }
 
         }
+
+        public void ActivateCustomer(string SSn,string branchID)
+        {
+            try
+            {
+                SqlCommand tst= new SqlCommand();
+                tst.CommandText = "INSERT INTO CUSTOMER (BRANCHID) VALUES('"+branchID+"') WHERE SSN='"+SSn+"'";
+                tst.Connection = this.cnn;
+                int rows=tst.ExecuteNonQuery();
+                MessageBox.Show("activated succefully "+rows);
+            }
+            catch(SqlException e)
+            {
+                MessageBox.Show("not found");
+                Console.WriteLine(e.Message.ToString());
+            }
+        }
+
         public static string generateID(int length){
             Random random = new Random();
         const string chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";

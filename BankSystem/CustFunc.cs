@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -24,12 +25,14 @@ namespace BankSystem
             label1.Text = Customer.Name;
             label2.Text = Customer.Address;
             label3.Text = Customer.BranchID;
-            if (Customer.BranchID != null)
+            if (Customer.BranchID == "")
             {
                 stateLBL.Text = "inactive";
                 label3.Text = "not connected";
             }
-            else { stateLBL.Text = "active"; }
+            else {
+                stateLBL.Text = "active";
+            }
             label4.Text = Customer.Phone;
             label5.Text = Customer.UserName;
         }
@@ -48,6 +51,7 @@ namespace BankSystem
             }
             else
             {
+                loanRequest1.c = this.Customer;
                 loanTypes1.Hide();
                 loanRequest1.Show();
             }

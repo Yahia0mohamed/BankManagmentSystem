@@ -38,7 +38,7 @@
             // button1
             // 
             button1.BackColor = SystemColors.GradientActiveCaption;
-            button1.Location = new Point(543, 379);
+            button1.Location = new Point(588, 390);
             button1.Name = "button1";
             button1.Size = new Size(237, 29);
             button1.TabIndex = 0;
@@ -51,7 +51,7 @@
             logIn1.BackColor = Color.Transparent;
             logIn1.Customer = null;
             logIn1.Employee = null;
-            logIn1.Location = new Point(506, 100);
+            logIn1.Location = new Point(551, 111);
             logIn1.Margin = new Padding(3, 4, 3, 4);
             logIn1.Name = "logIn1";
             logIn1.Size = new Size(314, 272);
@@ -61,16 +61,16 @@
             // empSignUp1
             // 
             empSignUp1.BackColor = Color.Transparent;
-            empSignUp1.Location = new Point(497, 118);
+            empSignUp1.Location = new Point(542, 129);
             empSignUp1.Name = "empSignUp1";
             empSignUp1.Size = new Size(508, 436);
             empSignUp1.TabIndex = 4;
             // 
             // bar1
             // 
-            bar1.Location = new Point(-2, 0);
+            bar1.Location = new Point(0, -1);
             bar1.Name = "bar1";
-            bar1.Size = new Size(1139, 39);
+            bar1.Size = new Size(967, 39);
             bar1.TabIndex = 5;
             // 
             // empSign_Log
@@ -79,7 +79,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(869, 535);
+            ClientSize = new Size(907, 535);
             Controls.Add(bar1);
             Controls.Add(empSignUp1);
             Controls.Add(logIn1);

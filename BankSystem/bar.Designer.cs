@@ -63,6 +63,7 @@
             button2.Size = new Size(37, 37);
             button2.TabIndex = 10;
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // bar
             // 

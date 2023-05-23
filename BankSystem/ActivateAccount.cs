@@ -10,26 +10,25 @@ using System.Windows.Forms;
 
 namespace BankSystem
 {
-    public partial class loanRequest : UserControl
+    public partial class ActivateAccount : UserControl
     {
+        public Employee employee { get; set; }
         BankSystemControler b;
-        public loanRequest()
+        public ActivateAccount()
         {
             InitializeComponent();
             b = new BankSystemControler();
         }
-        public Customer c {  get; set; }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            b.RequestLoan(SSN_txtBX.Text.ToString(), LType_txtBX.Text.ToString(), BID_txtBX.Text.ToString(), double.Parse(amount_txtBX.Text),c.Name);
-
+            b.ActivateCustomer(SSN_txtBX.Text.ToString(),branch_txtBX.Text.ToString());
             this.Hide();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

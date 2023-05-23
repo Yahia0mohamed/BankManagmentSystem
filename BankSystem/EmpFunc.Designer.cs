@@ -1,6 +1,6 @@
 ﻿namespace BankSystem
 {
-    partial class EmpFunc
+    partial class form
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmpFunc));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form));
             panel1 = new Panel();
+            button9 = new Button();
+            label1 = new Label();
+            button8 = new Button();
+            panel3 = new Panel();
             branchID = new Label();
             Name = new Label();
             userName = new Label();
@@ -41,10 +45,9 @@
             button6 = new Button();
             button4 = new Button();
             button5 = new Button();
-            panel3 = new Panel();
-            button8 = new Button();
-            label1 = new Label();
-            button9 = new Button();
+            signUp1 = new SignUp();
+            activateAccount1 = new ActivateAccount();
+            viewUsers1 = new ViewUsers();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -63,6 +66,42 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(810, 41);
             panel1.TabIndex = 0;
+            // 
+            // button9
+            // 
+            button9.Image = (Image)resources.GetObject("button9.Image");
+            button9.Location = new Point(3, 6);
+            button9.Name = "button9";
+            button9.Size = new Size(33, 29);
+            button9.TabIndex = 3;
+            button9.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(744, 12);
+            label1.Name = "label1";
+            label1.Size = new Size(54, 18);
+            label1.TabIndex = 7;
+            label1.Text = "HOME";
+            // 
+            // button8
+            // 
+            button8.Image = (Image)resources.GetObject("button8.Image");
+            button8.Location = new Point(703, 2);
+            button8.Name = "button8";
+            button8.Size = new Size(35, 37);
+            button8.TabIndex = 3;
+            button8.UseVisualStyleBackColor = true;
+            // 
+            // panel3
+            // 
+            panel3.BackgroundImage = (Image)resources.GetObject("panel3.BackgroundImage");
+            panel3.Location = new Point(247, 3);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(32, 34);
+            panel3.TabIndex = 6;
             // 
             // branchID
             // 
@@ -149,10 +188,11 @@
             button3.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button3.Location = new Point(25, 73);
             button3.Name = "button3";
-            button3.Size = new Size(94, 29);
+            button3.Size = new Size(94, 46);
             button3.TabIndex = 4;
             button3.Text = "View Users";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button6
             // 
@@ -173,6 +213,7 @@
             button4.TabIndex = 5;
             button4.Text = "View Waiting List";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button5
             // 
@@ -184,43 +225,34 @@
             button5.Text = "Accept Loan";
             button5.UseVisualStyleBackColor = true;
             // 
-            // panel3
+            // signUp1
             // 
-            panel3.BackgroundImage = (Image)resources.GetObject("panel3.BackgroundImage");
-            panel3.Location = new Point(247, 3);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(32, 34);
-            panel3.TabIndex = 6;
+            signUp1.BackColor = Color.Transparent;
+            signUp1.branchID = null;
+            signUp1.Location = new Point(12, 44);
+            signUp1.Name = "signUp1";
+            signUp1.Size = new Size(379, 472);
+            signUp1.TabIndex = 3;
             // 
-            // button8
+            // activateAccount1
             // 
-            button8.Image = (Image)resources.GetObject("button8.Image");
-            button8.Location = new Point(703, 2);
-            button8.Name = "button8";
-            button8.Size = new Size(35, 37);
-            button8.TabIndex = 3;
-            button8.UseVisualStyleBackColor = true;
+            activateAccount1.BackColor = Color.Transparent;
+            activateAccount1.employee = null;
+            activateAccount1.Location = new Point(12, 44);
+            activateAccount1.Name = "activateAccount1";
+            activateAccount1.Size = new Size(312, 145);
+            activateAccount1.TabIndex = 4;
             // 
-            // label1
+            // viewUsers1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(744, 12);
-            label1.Name = "label1";
-            label1.Size = new Size(54, 18);
-            label1.TabIndex = 7;
-            label1.Text = "HOME";
+            viewUsers1.BackColor = Color.Transparent;
+            viewUsers1.emp = null;
+            viewUsers1.Location = new Point(12, 111);
+            viewUsers1.Name = "viewUsers1";
+            viewUsers1.Size = new Size(361, 286);
+            viewUsers1.TabIndex = 5;
             // 
-            // button9
-            // 
-            button9.Image = (Image)resources.GetObject("button9.Image");
-            button9.Location = new Point(3, 6);
-            button9.Name = "button9";
-            button9.Size = new Size(33, 29);
-            button9.TabIndex = 3;
-            button9.UseVisualStyleBackColor = true;
-            // 
-            // EmpFunc
+            // form
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -228,10 +260,12 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 521);
+            Controls.Add(viewUsers1);
+            Controls.Add(activateAccount1);
+            Controls.Add(signUp1);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(button1);
-            Name.Text = "EmpFunc";
             Load += EmpFunc_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -257,5 +291,8 @@
         private Button button8;
         private Label label1;
         private Button button9;
+        private SignUp signUp1;
+        private ActivateAccount activateAccount1;
+        private ViewUsers viewUsers1;
     }
 }

@@ -59,10 +59,10 @@
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(label2);
-            panel1.Location = new Point(482, 42);
+            panel1.Location = new Point(12, 42);
             panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(473, 76);
+            panel1.Size = new Size(943, 76);
             panel1.TabIndex = 3;
             panel1.Paint += panel1_Paint;
             // 
@@ -72,7 +72,7 @@
             label5.BackColor = Color.Transparent;
             label5.Font = new Font("Arial", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(399, 3);
+            label5.Location = new Point(517, 3);
             label5.Name = "label5";
             label5.Size = new Size(62, 21);
             label5.TabIndex = 6;
@@ -108,7 +108,7 @@
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Arial", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(293, 33);
+            label4.Location = new Point(345, 36);
             label4.Name = "label4";
             label4.Size = new Size(62, 21);
             label4.TabIndex = 5;
@@ -129,7 +129,7 @@
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Arial", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(293, 3);
+            label3.Location = new Point(345, 3);
             label3.Name = "label3";
             label3.Size = new Size(62, 21);
             label3.TabIndex = 4;
@@ -176,21 +176,19 @@
             // panel2
             // 
             panel2.BackColor = Color.Transparent;
-            panel2.Controls.Add(loanTypes1);
             panel2.Controls.Add(ShowLoanTypes);
-            panel2.Controls.Add(loanRequest1);
             panel2.Controls.Add(RequestLoan);
-            panel2.Location = new Point(482, 126);
+            panel2.Location = new Point(463, 126);
             panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(520, 510);
+            panel2.Size = new Size(539, 510);
             panel2.TabIndex = 4;
             panel2.Paint += panel2_Paint;
             // 
             // loanTypes1
             // 
             loanTypes1.BackColor = Color.Transparent;
-            loanTypes1.Location = new Point(24, 23);
+            loanTypes1.Location = new Point(23, 149);
             loanTypes1.Margin = new Padding(3, 4, 3, 4);
             loanTypes1.Name = "loanTypes1";
             loanTypes1.Size = new Size(396, 349);
@@ -213,7 +211,7 @@
             // loanRequest1
             // 
             loanRequest1.BackColor = Color.Transparent;
-            loanRequest1.Location = new Point(42, 23);
+            loanRequest1.Location = new Point(56, 161);
             loanRequest1.Name = "loanRequest1";
             loanRequest1.Size = new Size(339, 327);
             loanRequest1.TabIndex = 5;
@@ -233,7 +231,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(970, 649);
+            ClientSize = new Size(970, 575);
+            Controls.Add(loanTypes1);
+            Controls.Add(loanRequest1);
             Controls.Add(bar1);
             Controls.Add(panel1);
             Controls.Add(panel2);
