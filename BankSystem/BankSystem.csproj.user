@@ -31,6 +31,9 @@
     <Compile Update="loanTypes.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="bar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="viewAllUser.cs">
       <SubType>UserControl</SubType>
     </Compile>

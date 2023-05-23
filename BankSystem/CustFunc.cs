@@ -59,5 +59,35 @@ namespace BankSystem
             loanRequest1.Hide();
             loanTypes1.Show();
         }
+
+        private void loanTypes1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void bar1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

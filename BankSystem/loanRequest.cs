@@ -26,7 +26,7 @@ namespace BankSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            b.RequestLoan(SSN_txtBX.Text.ToString(),LType_txtBX.Text.ToString(),BID_txtBX.Text.ToString(),double.Parse(amount_txtBX.Text));
+            b.RequestLoan(SSN_txtBX.Text.ToString(), LType_txtBX.Text.ToString(), BID_txtBX.Text.ToString(), double.Parse(amount_txtBX.Text));
 
             this.Hide();
         }

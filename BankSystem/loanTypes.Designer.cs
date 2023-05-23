@@ -49,19 +49,20 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label1.Font = new Font("Arial Black", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(140, 14);
+            label1.Location = new Point(119, 8);
             label1.Name = "label1";
-            label1.Size = new Size(83, 20);
+            label1.Size = new Size(125, 26);
             label1.TabIndex = 1;
-            label1.Text = "loan types";
+            label1.Text = "Loan Types";
             // 
             // button1
             // 
-            button1.Location = new Point(140, 306);
+            button1.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Location = new Point(60, 306);
             button1.Name = "button1";
-            button1.Size = new Size(94, 29);
+            button1.Size = new Size(253, 29);
             button1.TabIndex = 2;
             button1.Text = "view all";
             button1.UseVisualStyleBackColor = true;

@@ -31,7 +31,7 @@ namespace BankSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dataGridView1= b.getLoanTypes();
+            dataGridView1 = b.getLoanTypes();
             dataGridView1.Show();
         }
     }

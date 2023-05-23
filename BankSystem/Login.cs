@@ -22,7 +22,7 @@ namespace BankSystem
             b = new BankSystemControler();
             pass_txtBX.PasswordChar = '*';
         }
-        
+
         private void LogIn_Load(object sender, EventArgs e)
         {
 
@@ -30,7 +30,7 @@ namespace BankSystem
 
         private void confirmBtn_Click(object sender, EventArgs e)
         {
-            if(this.state == 0)
+            if (this.state == 0)
             {
                 string username = user_txtBX.Text.ToString();
                 string pass = pass_txtBX.Text.ToString();
@@ -62,12 +62,17 @@ namespace BankSystem
                 {
                     user_txtBX.ResetText();
                     pass_txtBX.ResetText();
-                    this.Employee=emp;
+                    this.Employee = emp;
                     EmpFunc newWin = new EmpFunc(Employee);
                     newWin.Show();
 
                 }
             }
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
 
         }
     }

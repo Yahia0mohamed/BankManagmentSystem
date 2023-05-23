@@ -35,5 +35,10 @@ namespace BankSystem
             empSign_Log newWind = new empSign_Log();
             newWind.Show();
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

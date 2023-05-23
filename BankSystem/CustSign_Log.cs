@@ -24,7 +24,7 @@ namespace BankSystem
             logIn2.state = 0;
             logIn2.Show();
         }
-        
+
 
         private void Form2_Load(object sender, EventArgs e)
         {
@@ -33,8 +33,8 @@ namespace BankSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            signUp1.Show();
-            
+
+
         }
 
         private void signUp1_Load(object sender, EventArgs e)
@@ -45,6 +45,26 @@ namespace BankSystem
         private void logIn2_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void logIn2_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void signUp1_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            signUp1.Show();
         }
     }
 }

@@ -34,38 +34,42 @@
             button2 = new Button();
             label2 = new Label();
             linkLabel1 = new LinkLabel();
+            label3 = new Label();
+            button3 = new Button();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Arial", 20F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("Arial Black", 22.2F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ControlLightLight;
-            label1.Location = new Point(26, 37);
+            label1.Location = new Point(175, 39);
             label1.Name = "label1";
-            label1.Size = new Size(165, 40);
+            label1.Size = new Size(540, 52);
             label1.TabIndex = 0;
-            label1.Text = "Welcome";
+            label1.Text = "Bank Managment System";
             label1.Click += label1_Click;
             // 
             // button1
             // 
-            button1.Location = new Point(137, 117);
+            button1.Font = new Font("Arial", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Location = new Point(659, 156);
             button1.Name = "button1";
             button1.Size = new Size(146, 56);
             button1.TabIndex = 1;
-            button1.Text = "customer";
+            button1.Text = "Customer";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
             // button2
             // 
-            button2.Location = new Point(137, 484);
+            button2.Font = new Font("Arial", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.Location = new Point(659, 253);
             button2.Name = "button2";
             button2.Size = new Size(146, 56);
             button2.TabIndex = 2;
-            button2.Text = "employee";
+            button2.Text = "Employee";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
@@ -92,6 +96,25 @@
             linkLabel1.TabStop = true;
             linkLabel1.Text = "click";
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(649, 402);
+            label3.Name = "label3";
+            label3.Size = new Size(0, 20);
+            label3.TabIndex = 5;
+            label3.Click += label3_Click;
+            // 
+            // button3
+            // 
+            button3.Font = new Font("Arial", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.Location = new Point(659, 350);
+            button3.Name = "button3";
+            button3.Size = new Size(146, 56);
+            button3.TabIndex = 6;
+            button3.Text = "Admin";
+            button3.UseVisualStyleBackColor = true;
+            // 
             // homePage
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -100,6 +123,8 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(917, 660);
+            Controls.Add(button3);
+            Controls.Add(label3);
             Controls.Add(linkLabel1);
             Controls.Add(label2);
             Controls.Add(button2);
@@ -119,5 +144,7 @@
         private Button button2;
         private Label label2;
         private LinkLabel linkLabel1;
+        private Label label3;
+        private Button button3;
     }
 }

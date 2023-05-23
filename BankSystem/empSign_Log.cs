@@ -17,7 +17,7 @@ namespace BankSystem
             InitializeComponent();
             empSignUp1.Hide();
             logIn1.Show();
-            logIn1.state=1;
+            logIn1.state = 1;
         }
 
         private void empSignUp1_Load(object sender, EventArgs e)
@@ -28,6 +28,11 @@ namespace BankSystem
         private void button1_Click(object sender, EventArgs e)
         {
             empSignUp1.Show();
+        }
+
+        private void bar1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
