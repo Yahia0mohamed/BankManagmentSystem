@@ -29,5 +29,13 @@
             this.userName = userName;
             this.password = password;
         }
+        public void SetEmployee(string id,string name, string branchID, string userName, string password)
+        {
+            this.employeeID = id;
+            this.name = name;
+            this.branchID = branchID;
+            this.userName = userName;
+            this.password = password;
+        }
     }
 }

@@ -182,6 +182,7 @@
             Controls.Add(SSN_txtBX);
             Name = "SignUp";
             Size = new Size(453, 391);
+            Load += SignUp_Load;
             ResumeLayout(false);
             PerformLayout();
         }

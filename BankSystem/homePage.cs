@@ -1,9 +1,9 @@
 namespace BankSystem
 {
-    public partial class Form1 : Form
+    public partial class homePage : Form
     {
-        public static Form1 instance;
-        public Form1()
+        public static homePage instance;
+        public homePage()
         {
             InitializeComponent();
             instance = this;
@@ -26,7 +26,13 @@ namespace BankSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 newWind = new Form2();
+            CustSign_Log newWind = new CustSign_Log();
+            newWind.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            empSign_Log newWind = new empSign_Log();
             newWind.Show();
         }
     }

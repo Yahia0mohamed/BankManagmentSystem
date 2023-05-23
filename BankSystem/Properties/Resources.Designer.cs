@@ -59,5 +59,25 @@ namespace BankSystem.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2023_05_21_at_04_22_36 {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2023-05-21 at 04.22.36", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2023_05_21_at_04_221 {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2023-05-21 at 04.221", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

@@ -19,6 +19,7 @@ namespace BankSystem
             instance = this;
             InitializeComponent();
             b = new BankSystemControler();
+            pass_txtBX.PasswordChar = '*';
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -39,6 +40,11 @@ namespace BankSystem
             user_txtBX.ResetText();
             pass_txtBX.ResetText();
             instance.Hide();
+        }
+
+        private void SignUp_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
