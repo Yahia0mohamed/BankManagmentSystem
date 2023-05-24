@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\repo\\DataBase_Project\\BankSystem\\BankSystem.csproj": {}
+    "D:\\FCAI\\database\\DataBase_Project\\BankSystem\\BankSystem.csproj": {}
   },
   "projects": {
-    "C:\\repo\\DataBase_Project\\BankSystem\\BankSystem.csproj": {
+    "D:\\FCAI\\database\\DataBase_Project\\BankSystem\\BankSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\repo\\DataBase_Project\\BankSystem\\BankSystem.csproj",
+        "projectUniqueName": "D:\\FCAI\\database\\DataBase_Project\\BankSystem\\BankSystem.csproj",
         "projectName": "BankSystem",
-        "projectPath": "C:\\repo\\DataBase_Project\\BankSystem\\BankSystem.csproj",
-        "packagesPath": "C:\\Users\\yaras\\.nuget\\packages\\",
-        "outputPath": "C:\\repo\\DataBase_Project\\BankSystem\\obj\\",
+        "projectPath": "D:\\FCAI\\database\\DataBase_Project\\BankSystem\\BankSystem.csproj",
+        "packagesPath": "C:\\Users\\yahia\\.nuget\\packages\\",
+        "outputPath": "D:\\FCAI\\database\\DataBase_Project\\BankSystem\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\yaras\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\yahia\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,6 +40,14 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "dependencies": {
+            "Microsoft.ReportingServices.ReportViewerControl.WebForms": {
+              "target": "Package",
+              "version": "[150.1576.0, )"
+            },
+            "Microsoft.ReportingServices.ReportViewerControl.WinForms": {
+              "target": "Package",
+              "version": "[140.1000.523, )"
+            },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.5, )"

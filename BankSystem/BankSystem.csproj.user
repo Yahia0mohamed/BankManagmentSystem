@@ -1,7 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="AccRejLoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="ActivateAccount.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="addBank.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="addBranch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="adminControls.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="AdminFunc.cs">
@@ -9,6 +21,12 @@
     </Compile>
     <Compile Update="empSignUp.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="loanDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Loanoptions.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Update="Login.cs">
       <SubType>UserControl</SubType>
@@ -40,14 +58,22 @@
     <Compile Update="bar.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="PayLoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="reportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="viewAllUser.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="ViewUsers.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="viewWaitings.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="myBankSystemDataSet.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
 </Project>

@@ -105,30 +105,6 @@ namespace BankSystem
                 return new Employee();
             }
         }
-        public void ViewLoans() { }
-        public void AcceptLoan(WaitingList loan) { }
-        public DataGridView getLoanTypes()
-        {
-            try
-            {
-                DataGridView table = new DataGridView();
-                dt = new DataTable();
-                this.cmd = new SqlCommand("select distinct loanType from Loan;", this.cnn);
-                adapter = new SqlDataAdapter(cmd);
-                adapter.Fill(dt);
-                table.DataSource = dt;
-                if (dt.Rows.Count > 0)
-                {
-                    return table;
-                }
-                MessageBox.Show("no data to show");
-                return new DataGridView();
-            }
-            catch (Exception ex)
-            {
-                return new DataGridView();
-            }
-        }
         public DataGridView ViewCustomers(string branchID)
         {
             try {
@@ -203,7 +179,7 @@ namespace BankSystem
             }
         }
 
-        public static string generateID(int length){
+        public string generateID(int length){
             Random random = new Random();
         const string chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
             return new string(Enumerable.Repeat(chars, length)

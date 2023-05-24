@@ -30,9 +30,9 @@
         {
             SSN_txtBX = new Label();
             textBox1 = new TextBox();
-            button1 = new Button();
             label1 = new Label();
             branch_txtBX = new TextBox();
+            button1 = new Button();
             SuspendLayout();
             // 
             // SSN_txtBX
@@ -54,18 +54,6 @@
             textBox1.TabIndex = 1;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
-            // button1
-            // 
-            button1.BackColor = Color.White;
-            button1.ForeColor = Color.Black;
-            button1.Location = new Point(83, 111);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 2;
-            button1.Text = "activate";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
-            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -83,14 +71,25 @@
             branch_txtBX.Size = new Size(125, 27);
             branch_txtBX.TabIndex = 4;
             // 
+            // button1
+            // 
+            button1.Font = new Font("Arial", 7.8F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Location = new Point(83, 113);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 27;
+            button1.Text = "Confirm";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
+            // 
             // ActivateAccount
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Transparent;
+            Controls.Add(button1);
             Controls.Add(branch_txtBX);
             Controls.Add(label1);
-            Controls.Add(button1);
             Controls.Add(textBox1);
             Controls.Add(SSN_txtBX);
             Name = "ActivateAccount";
@@ -103,8 +102,8 @@
 
         private Label SSN_txtBX;
         private TextBox textBox1;
-        private Button button1;
         private Label label1;
         private TextBox branch_txtBX;
+        private Button button1;
     }
 }

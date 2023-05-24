@@ -79,5 +79,15 @@ namespace BankSystem.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2023_05_23_at_04_06_41 {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2023-05-23 at 04.06.41", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

@@ -17,6 +17,11 @@ namespace BankSystem
         public AdminFunc()
         {
             InitializeComponent();
+            adminControls1.Hide();
+            addBank1.Hide();
+            addBranch1.Hide();
+            adminControls1.instance = addBank1;
+            adminControls1.addBranch = addBranch1;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -40,6 +45,29 @@ namespace BankSystem
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (code_txtbx.Text.ToString() == "500500")
+            {
+                adminControls1.Show();
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AdminFunc_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void adminControls1_Load(object sender, EventArgs e)
         {
 
         }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -31,8 +32,14 @@ namespace BankSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dataGridView1 = b.getLoanTypes();
-            dataGridView1.Show();
+            SqlConnection con = new SqlConnection("Data Source=.; Initial Catalog = myBankSystem; Integrated Security = True");
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select distinct loanType from Loan", con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+            con.Close();
         }
     }
 }

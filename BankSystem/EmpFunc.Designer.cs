@@ -2,6 +2,8 @@
 {
     partial class form
     {
+        private const string V = "form";
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -39,15 +41,14 @@
             userName = new Label();
             button1 = new Button();
             panel2 = new Panel();
-            button7 = new Button();
             button2 = new Button();
             button3 = new Button();
-            button6 = new Button();
             button4 = new Button();
-            button5 = new Button();
             signUp1 = new SignUp();
             activateAccount1 = new ActivateAccount();
             viewUsers1 = new ViewUsers();
+            loanDetails1 = new loanDetails();
+            button5 = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -151,26 +152,14 @@
             // panel2
             // 
             panel2.BackColor = Color.Transparent;
-            panel2.Controls.Add(button7);
+            panel2.Controls.Add(button5);
             panel2.Controls.Add(button2);
             panel2.Controls.Add(button3);
-            panel2.Controls.Add(button6);
             panel2.Controls.Add(button4);
-            panel2.Controls.Add(button5);
             panel2.Location = new Point(618, 111);
             panel2.Name = "panel2";
             panel2.Size = new Size(132, 398);
             panel2.TabIndex = 1;
-            // 
-            // button7
-            // 
-            button7.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button7.Location = new Point(25, 354);
-            button7.Name = "button7";
-            button7.Size = new Size(94, 29);
-            button7.TabIndex = 8;
-            button7.Text = "Pay Loan";
-            button7.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -186,7 +175,7 @@
             // button3
             // 
             button3.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.Location = new Point(25, 73);
+            button3.Location = new Point(25, 91);
             button3.Name = "button3";
             button3.Size = new Size(94, 46);
             button3.TabIndex = 4;
@@ -194,36 +183,16 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
-            // button6
-            // 
-            button6.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button6.Location = new Point(25, 299);
-            button6.Name = "button6";
-            button6.Size = new Size(94, 29);
-            button6.TabIndex = 7;
-            button6.Text = "Reject Loan";
-            button6.UseVisualStyleBackColor = true;
-            // 
             // button4
             // 
             button4.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button4.Location = new Point(25, 137);
+            button4.Location = new Point(25, 308);
             button4.Name = "button4";
             button4.Size = new Size(94, 49);
             button4.TabIndex = 5;
-            button4.Text = "View Waiting List";
+            button4.Text = "loan operations";
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
-            // 
-            // button5
-            // 
-            button5.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button5.Location = new Point(25, 212);
-            button5.Name = "button5";
-            button5.Size = new Size(94, 56);
-            button5.TabIndex = 6;
-            button5.Text = "Accept Loan";
-            button5.UseVisualStyleBackColor = true;
             // 
             // signUp1
             // 
@@ -252,6 +221,25 @@
             viewUsers1.Size = new Size(361, 286);
             viewUsers1.TabIndex = 5;
             // 
+            // loanDetails1
+            // 
+            loanDetails1.BackColor = Color.Transparent;
+            loanDetails1.Location = new Point(50, 80);
+            loanDetails1.Name = "loanDetails1";
+            loanDetails1.Size = new Size(412, 341);
+            loanDetails1.TabIndex = 6;
+            // 
+            // button5
+            // 
+            button5.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button5.Location = new Point(25, 193);
+            button5.Name = "button5";
+            button5.Size = new Size(94, 49);
+            button5.TabIndex = 6;
+            button5.Text = "loan details";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
+            // 
             // form
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -260,6 +248,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 521);
+            Controls.Add(loanDetails1);
             Controls.Add(viewUsers1);
             Controls.Add(activateAccount1);
             Controls.Add(signUp1);
@@ -278,12 +267,9 @@
         private Panel panel1;
         private Panel panel2;
         private Button button1;
-        private Button button6;
-        private Button button5;
         private Button button2;
         private Button button3;
         private Button button4;
-        private Button button7;
         private Label branchID;
         private Label Name;
         private Label userName;
@@ -294,5 +280,7 @@
         private SignUp signUp1;
         private ActivateAccount activateAccount1;
         private ViewUsers viewUsers1;
+        private loanDetails loanDetails1;
+        private Button button5;
     }
 }

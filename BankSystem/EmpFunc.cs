@@ -24,8 +24,12 @@ namespace BankSystem
             activateAccount1.Hide();
             viewUsers1.Hide();
             signUp1.branchID = this.employee.BranchID;
-            viewUsers1.emp= employee;
-            
+            viewUsers1.emp = employee;
+            loanDetails1.Hide();
+            loanDetails1.emp = employee;
+            activateAccount1.employee = employee;
+
+
         }
 
         private void EmpFunc_Load(object sender, EventArgs e)
@@ -38,13 +42,16 @@ namespace BankSystem
             signUp1.Hide();
             viewUsers1.Hide();
             activateAccount1.Show();
+            loanDetails1.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            loanDetails1.Hide();
             activateAccount1.Hide();
             viewUsers1.Hide();
             signUp1.Show();
+            
         }
 
         private void userName_Click(object sender, EventArgs e)
@@ -54,9 +61,27 @@ namespace BankSystem
 
         private void button3_Click(object sender, EventArgs e)
         {
+            loanDetails1.Hide();
             signUp1.Hide();
             activateAccount1.Hide();
             viewUsers1.Show();
+           
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Loanoptions newwin = new Loanoptions();
+            newwin.employee = employee;
+            newwin.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            
+            signUp1.Hide();
+            activateAccount1.Hide();
+            viewUsers1.Hide();
+            loanDetails1.Show();
         }
     }
 }
